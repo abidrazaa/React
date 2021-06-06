@@ -15,3 +15,36 @@ Basically, it gives us an advantage that no matter where functions and variables
 *) create-react-app --version  ==> Version of react
 
 *) create-react-app class1  ==> create a react project named class1 
+
+
+FrameWork vs Library
+
+Angular vs React
+
+restriction hoti h vs no restrictions
+
+Revision JS: 
+
+*) Spread Operator:
+	copy the object with other memory reference.
+	obj = {name : "abid"}
+	obj2 = { ...obj }
+
+*) .gitignore mn wo folders ya file ayengi jinko git p nhy bhejna hai
+
+*) node_modules ko git mn nhy bhejenge q k usmn bht sari files hain.. git ki waat lag jayegi..
+
+*) lakn jb ham kisi or ka project uthanege to zahir h usmn bhi node_modules ka folder nhy hoga to chalega kese???
+	Ans:   ham kisi ka project uthaenge to npm install ki command chalaenge to wo khud hi download karlega node_module ka folder.
+
+
+mount == render == show hona UI p
+
+jsx == JavaScript XML
+
+
+MAP function in JS:
+	Array.map
+	Array se naya array generate karna kch changes k sath.
+
+
