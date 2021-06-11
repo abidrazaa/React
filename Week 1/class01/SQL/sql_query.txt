@@ -1,0 +1,22 @@
+CREATE TABLE Metas (
+    id int AUTO_INCREMENT,
+    mid int ,
+    page char(255) DEFAULT 'NULL',
+    title char(255) DEFAULT 'NULL',
+    desc char(255) DEFAULT 'NULL',
+    keywords char(255) DEFAULT 'NULL',
+    og_type char(255) DEFAULT 'NULL',
+    og_site_name char(255) DEFAULT 'NULL',
+    og_url char(255) DEFAULT 'NULL',
+    og_title char(255) DEFAULT 'NULL',
+    og_type char(255) DEFAULT 'NULL',
+    og_description char(255) DEFAULT 'NULL',
+    og_image char(255) DEFAULT 'NULL',
+    og_image_secure_url char(255) DEFAULT 'NULL',
+    twitter_site char(255) DEFAULT 'NULL',
+    twitter_card char(255) DEFAULT 'NULL',
+    twitter_title char(255) DEFAULT 'NULL',
+    twitter_description char(255) DEFAULT 'NULL',
+    twitter_image char(255) DEFAULT 'NULL',
+    PRIMARY KEY(id)
+);
