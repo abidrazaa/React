@@ -6,7 +6,7 @@ function App() {
 const obj = {name: "Hello World Object"}
 const data = ['We', 'are', 'United'] //Show these in seperate tags
 const list = [{name: "Hello World 1"}, {name: "Hello World 2"}, {name: "Hello World 3"}] //Show these in seperate tags
-var complex = [{company: 'XYZ', jobs: ['Javascript', 'React']}, {company: 'ABC', jobs: ['AngularJs','Ionic']}] //Show these in a Table
+var complex = [{company: 'Expertizo', jobs: ['Javascript', 'React']}, {company: '10 Pearls', jobs: ['AngularJs','Ionic']}] //Show these in a Table
 
 
   const kaam = ["anday","aalu","bahu"]
@@ -31,52 +31,26 @@ var complex = [{company: 'XYZ', jobs: ['Javascript', 'React']}, {company: 'ABC',
 
         <table border="3">
           <tr>
-            <td>
-              Company
-            </td>
-            <td>
-              {complex[0]["company"]}
-            </td>
+            <th>Compnay</th>
+            <th>Jobs</th>
           </tr>
 
-          <tr>
-            <td>
-              Jobs
-            </td>
-            <td>{
-              complex[0]["jobs"].map(
-                function(item){
-                  return <p>{item}</p> 
-                }
-              )
-              }
-
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Company
-            </td>
-            <td>
-              {complex[1]["company"]}
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              Jobs
-            </td>
-            <td>{
-              complex[1]["jobs"].map(
-                function(item){
-                  return <p> {item} </p>
-                }
-              )
-              }
-
-            </td>
-          </tr>
-
+        
+              {complex.map((item)=>{
+                return <tr>
+                <td>
+                {item.company}
+                </td>
+                <td>
+                <ul>
+                  {item.jobs.map((job)=>{
+                    return <li>{job}</li>
+                  })}
+                  </ul>
+                </td>
+                </tr>
+              })}
+           
         </table>
       
         {/* <table border="3">
