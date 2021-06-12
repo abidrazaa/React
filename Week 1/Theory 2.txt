@@ -1,0 +1,27 @@
+Falsy Values:
+
+1. False
+2. 0
+3. ""  // gap k saath string hoga to wo true hojata h
+4. null 
+5. undefined
+6. NaN
+
+iske ilawa saari values true hoti hain
+
+
+CONDITIONAL RENDERING:
+	
+*) && ==> AND
+    Agar pehle value true hogi to aagay barhega 
+    	for exapmle: return true && "a"==="a" && "Hello"  ==> iska answer "Hello" ayega
+	for exapmle: return true && "Hi" && "Hello"  ==> iska answer "Hi" ayega
+
+*) || ==> OR
+    Agar OR se pehle value false mili to aagay barhega warna OR se pehle wali chz hi return kardega
+	for example: return "" || true && "WOWWW"  ==> iska answer "WOWWW" ayega
+    	for example: return "Abid" || true && "WOWWW"  ==> iska answer "Abid" ayega
+    	for example: return true && "hello"==="hello" && "Nice" || true && "WOWWW"  ==> iska answer "Nice" ayega
+
+
+
