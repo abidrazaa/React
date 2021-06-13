@@ -23,5 +23,9 @@ CONDITIONAL RENDERING:
     	for example: return "Abid" || true && "WOWWW"  ==> iska answer "Abid" ayega
     	for example: return true && "hello"==="hello" && "Nice" || true && "WOWWW"  ==> iska answer "Nice" ayega
 
-
+Synchronous:
+	Line by line execute.
+Asynchronous:
+	Request bhejdeta h lakin kaam baad mn karta hai.
+	example: SetTimeout , Fetch 
 
