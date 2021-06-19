@@ -1,0 +1,19 @@
+const addItem = () => {
+	const tempList = [...list];
+	tempList.push(text);
+	setList(tempList);
+
+}
+
+
+const deleteItem = (index) => {
+	const tempList = [...list];
+	tempList.splice(index,1);
+	setList(tempList);
+}
+
+
+*) State:
+    1) Accessible from everywhere inside the component
+    2) Whenever it updates, it rerenders the component
+    3) States are directly immutable
