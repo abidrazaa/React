@@ -225,8 +225,6 @@ function App() {
 
   const [Obstacle, setObstacle] = useState(true)
 
-  const [text,setText] = useState("");
-  const [list,setList] = useState([]);
   /*
     State:
     1) Accessible from everywhere inside the component
@@ -245,25 +243,46 @@ function App() {
   const switchTheBulb = () => {
     setBulbSwitch(!bulbSwitch) //bulbSwitch = true
   }
+  const changeState = () => {
+    setObstacle("ball")
+  }
 
 
+
+
+
+  
+  const [text,setText] = useState("");
+  const [list,setList] = useState([]);
+  const [editMode, setEditMode] = useState(false);
 
   const addItem = () => {
     const tempList = [...list];
     tempList.push(text);
     setList(tempList);
-  
+    setText("");
   }
-  
-  
+  const editItem = (index) => {
+    setText(list[index]);
+    setEditMode(true);
+
+
+  }
+  const updateItem = () => {
+    const index = list.indexOf(text);
+    console.log("index ==> ",index);
+    
+
+
+  }
   const deleteItem = (index) => {
     const tempList = [...list];
     tempList.splice(index,1);
     setList(tempList);
   }
-  const changeState = () => {
-    setObstacle("ball")
-  }
+
+
+
 
  
   return (
@@ -274,25 +293,41 @@ function App() {
         {/* {!bulbSwitch && <img width="300" src='https://previews.123rf.com/images/ericmilos/ericmilos0912/ericmilos091200136/6109526-3d-render-of-light-bulb-on-white.jpg' />}
         {bulbSwitch && <img width="300" src='https://previews.123rf.com/images/murika/murika1511/murika151100069/48123160-bright-glowing-incandescent-light-bulb-on-a-white-background.jpg' />} */}
         <span>
-        <input
-        style={{ height: 25 }}
-        onChange={(e)=>{
-          setText(e.target.value);
-        }}
-        type="text" placeholder="Enter Todo" />
-        <button 
-        style={{ backgroundColor: 'green', color: 'white', height: 30 }}
-        onClick={addItem}>Add</button>
+          <input
+          value={text}
+          style={{ height: 25 }}
+          onChange={(e)=>{
+            setText(e.target.value);
+          }}
+          type="text" placeholder="Enter Todo" />
+          {
+
+          editMode
+          ?
+            <button 
+            style={{ backgroundColor: 'blue', color: 'white', height: 30 }}
+            onClick={updateItem}>Update</button>
+          :
+            <button 
+            style={{ backgroundColor: 'green', color: 'white', height: 30 }}
+            onClick={addItem}>Add</button>
+
+        }
         </span>
         <br />
         <br />
         <br />
 
-        <ul>
+        <table border="2">
           {list.map((item,index) => {
             return <tr>
               <td>
                 {item}
+              </td>
+              <td>
+                <button onClick={() => editItem(index)}>
+                  Edit
+                </button>
               </td>
               <td>
                 <button onClick={() => deleteItem(index)}>
@@ -301,9 +336,9 @@ function App() {
               </td>
               </tr>
           })}
-        </ul>
+        </table>
 
-        <div className="container"
+        {/* <div className="container"
         style={{ backgroundColor: 'black' , padding: '5px' }}
         
         >
@@ -324,7 +359,7 @@ function App() {
             </span>
           </div>
 
-        </div>
+        </div> */}
 
         <br />
         <br />
