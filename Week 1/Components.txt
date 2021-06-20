@@ -1,0 +1,11 @@
+Types of Components:
+	1) Functional Component
+	2) Class Component
+
+Usages of Component:
+	1) Screenwise components (Home, dashboard)
+	2) Reusable components (Header , footer)
+
+
+views folder mn saare screenwise with capital letter eg: CustomButton
+components folder mn saare reusable 

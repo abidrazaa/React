@@ -2,11 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
+import CustomButton  from './components/CustomButton';
+import Dashboard from './views/Dashboard';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <App /> 
+
+    
+    {/* <CustomButton title = "CLick me"/>
+    <CustomButton title = "CLick me"/>
+    <CustomButton title = "CLick me"/>
+    <CustomButton title = "CLick me"/>
+    <CustomButton title = "CLick me"/> */}
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
