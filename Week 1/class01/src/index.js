@@ -12,12 +12,7 @@ ReactDOM.render(
     <App /> 
 
     
-    {/* <CustomButton title = "CLick me"/>
-    <CustomButton title = "CLick me"/>
-    <CustomButton title = "CLick me"/>
-    <CustomButton title = "CLick me"/>
-    <CustomButton title = "CLick me"/> */}
-    
+
   </React.StrictMode>,
   document.getElementById('root')
 );
