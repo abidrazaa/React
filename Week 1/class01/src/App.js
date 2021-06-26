@@ -27,9 +27,9 @@ function App() {
     <div className="App" >
       <header className="App-header">
         
-
+        <Question index = {index} question = {questionAnswers[index]} />
         
-        <Question question= {questionAnswers[index].question} answer = {questionAnswers[index].correct_answer} wrongAnswer = {questionAnswers[index].incorrect_answers} index = {index} />
+        {/* <Question question= {questionAnswers[index].question} answer = {questionAnswers[index].correct_answer} wrongAnswer = {questionAnswers[index].incorrect_answers} index = {index} /> */}
         {index==9 
         ?
         <button

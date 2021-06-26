@@ -1,0 +1,4 @@
+useEffect (callback function , array)
+
+	useEffect ka array agar empty hoga to component ki zindagi mn ek hi baar chalega
+	agar array mn koi change honay wali value daali to jab jab bhi uski value change hogi useEffect chalega
