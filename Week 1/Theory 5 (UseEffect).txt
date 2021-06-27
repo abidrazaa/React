@@ -1,4 +1,15 @@
 useEffect (callback function , array)
 
 	useEffect ka array agar empty hoga to component ki zindagi mn ek hi baar chalega
-	agar array mn koi change honay wali value daali to jab jab bhi uski value change hogi useEffect chalega
+	agar array mn koi change honay wali value daali to jab jab bhi uski value change hogi useEffect 
+
+UseEffect 3 waja se use hota hai:
+	1) initial: koi kaam karwana ho component render hony k baad sirf ek martaba e.g API request 
+		useEffect(()=>{
+
+		},[])
+	2) Updation: kch kaam karwana kisi state ya props k update hony pr
+		useEffect(()=>{
+
+		},[variable])
+	3) Unmounting: kc kaam karwana ho component end honay se pehle e.g removeEventListener
