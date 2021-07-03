@@ -1,0 +1,36 @@
+1) create project
+2) install firebase ==> npm install firebase
+3) setup web app from project settings on firebase
+4) copy the config code 
+5) make folder Config/index.js and paste config code here
+
+*) <> </> ===> fragment
+
+
+
+*) ASYNC AWAIT:
+
+const signIn = async() => {
+	
+	try{
+		const user = await login(email,password)
+	}
+	
+	catch(error){
+		console.log(error.message)
+	}
+
+}
+
+*) collection -> documents (primary keys) -> data
+
+
+*) Insert in Database (Fire Store)
+
+	firebase.firestore().collection("collection-name").add({name:name , email:email})
+	.then(res=>{
+		console.log("res ==>",res)
+	})
+	.catch(e=>{
+		console.log(e.message)
+	})
