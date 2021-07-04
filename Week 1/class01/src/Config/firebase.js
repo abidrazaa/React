@@ -11,37 +11,49 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore()
 
 
 
-function register(email, password, fullName) {
-    //async vs sync
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        // Signed in 
-        var user = userCredential.user;
-        console.log('user ===>', user)
-        alert('User Registered Successfully!')
-        console.log('2')
+// function register(email,password,fullName) {
+//      //async vs sync
+//     firebase.auth().createUserWithEmailAndPassword(email, password)
+//       .then((userCredential) => {
+//         // Signed in 
+//         var user = userCredential.user;
+//         console.log('user ===>', user)
+//         alert('User Registered Successfully!')
   
-        db.collection('users').add({ email, fullName })
-        .then(res => {
-          console.log('res ===>', res)
-        }).catch(e => {
-          console.log('error in user db', e.message)
-        })
-        // ...
-      })
-      .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        alert(errorMessage)
-        // ..
-      });
+//         db.collection('users').add({ email, fullName })
+//         .then(res => {
+//           console.log('res ===>', res)
+//         }).catch(e => {
+//           console.log('error in user db', e.message)
+//         })
+//         // ...
+//       })
+//       .catch((error) => {
+//         var errorCode = error.code;
+//         var errorMessage = error.message;
+//         alert(errorMessage)
+//         // ..
+//       });
   
-      //1,3,4 (2) //wo bewakuf noker hai jo chae banne ka intezar karega
-      //1,4,3 (19) //wo intelligent noker hai jo chae banne ka intezar nahi karega aur agla kaam karlega
+//       //1,3,4 (2) //wo bewakuf noker hai jo chae banne ka intezar karega
+//       //1,4,3 (19) //wo intelligent noker hai jo chae banne ka intezar nahi karega aur agla kaam karlega
+//   }
+
+  function login(email, password) {
+    return firebase.auth().signInWithEmailAndPassword(email, password)
+  }
+
+  function register(email,password){
+    return firebase.auth().createUserWithEmailAndPassword(email, password)
+  }
+
+  function getAllUsers () {
+    return db.collection("users").get()
   }
 
 
-export {register}
+export {register , login , getAllUsers}
