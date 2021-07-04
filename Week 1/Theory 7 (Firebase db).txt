@@ -1,0 +1,15 @@
+.add ===> generates a random id
+.set ===> apki pasnd ki id dega
+
+*) SET:
+	db.colllection().doc(user.uid).set({email,fullname})
+
+*) GET:
+	db.colllection("users").get()
+
+*) ADD KEY VALUE in Object:
+	const obj = {name:"Abid", email: "abid@gmail.com"}
+
+	const addInObject = {...obj , id : 2 , university : "NED"}
+
+	
