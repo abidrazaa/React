@@ -1,0 +1,7 @@
+*) Install Bootstrap:
+	1) npm install react-bootstrap bootstrap
+
+	2) import 'bootstrap/dist/css/bootstrap.min.css'; in index.js or App.js
+
+	3) jo bhi component use karna ho usay import karlo
+	e.g : import {Button} from "react-bootstrap"; 
