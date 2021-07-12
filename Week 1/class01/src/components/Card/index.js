@@ -5,7 +5,7 @@ function OlxCard() {
     return (
 
         <div 
-        style={{widht:"100%" , backgroundColor:"red"}}
+        style={{widht:"100%" , backgroundColor:"red" , margin:20}}
         >
             <Container>
                 <Row>
