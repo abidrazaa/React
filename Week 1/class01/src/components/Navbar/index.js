@@ -4,9 +4,9 @@ function OlxNavbar() {
     return (
         <div>
             <Navbar fixed="top" bg="light" expand="lg" 
-            style={{padding:10}}
+            style={{padding:10 , marginBottom:"80px"}}
             >
-                <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+                <Navbar.Brand href="#">OLX</Navbar.Brand>
                 <Navbar.Toggle  />
                 <Navbar.Collapse>
                     <Nav
