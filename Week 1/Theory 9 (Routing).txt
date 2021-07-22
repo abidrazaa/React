@@ -1,0 +1,8 @@
+*) Routing:
+	poora pooora page change na hona.. url based agar particular part change karna ho.
+
+*) Alias: 
+	Nick Name 
+	eg: Numpy as np
+
+
